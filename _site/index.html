@@ -54,7 +54,7 @@
             
 <!-- Hero Section -->
 <section class="relative mt-4 container-custom h-screen flex items-center justify-center rounded-[25px] overflow-hidden border-2 border-gray-900 shadow-xl">
-    <!-- Video: drop pointer-events-none -->
+    <!-- Video: leave as-is (no pointer-events-none) -->
     <video
         class="absolute w-full h-full object-cover z-0"
         autoplay
@@ -68,20 +68,27 @@
         <source src="/test-carwash/assets/video/hero-video.mp4" type="video/mp4">
     </video>
 
-    <!-- Gradient overlay: keep pointer-events-none, z-10 -->
+    <!-- Gradient overlay: pointer-events-none so taps pass through -->
     <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-red-400 opacity-30 z-10 pointer-events-none"></div>
 
-    <!-- Text/button: z-20 -->
-    <div class="text-center relative z-20">
+    <!-- Text/button container: pointer-events-none -->
+    <div class="text-center relative z-20 pointer-events-none">
         <h1 class="hero-title text-4xl md:text-6xl font-bold mb-6">
             Твоята кола заслужава най-доброто качество и грижа.
         </h1>
         <p class="hero-subtitle text-xl md:text-2xl text-luxury-gray mb-8 max-w-2xl mx-auto">
             Премиум измиване с внимание към всеки детайл.
         </p>
-        <a href="/rezervaciq" class="btn-primary hero-button">Резервирайте сега</a>
+        <!-- Re-enable pointer events on the link itself -->
+        <a
+          href="/rezervaciq"
+          class="btn-primary hero-button pointer-events-auto"
+        >
+          Резервирайте сега
+        </a>
     </div>
 </section>
+
 
 
 
