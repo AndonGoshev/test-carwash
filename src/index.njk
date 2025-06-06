@@ -4,65 +4,37 @@ title: Начало
 ---
 
 <!-- Hero Section -->
-<section
-  class="relative mt-4 container-custom h-screen flex items-center justify-center rounded-[25px] overflow-hidden border-2 border-gray-900 shadow-xl"
->
-  <!-- VIDEO: muted first, then autoplay, playsinline for iOS -->
-  <video
-    id="heroVideo"
-    class="absolute w-full h-full object-cover -z-20"
-    muted
-    autoplay
-    loop
-    playsinline
-    webkit-playsinline
-    preload="auto"
-    data-wf-ignore="true"
-  >
-    <source src="{{ '/assets/video/hero-video.mp4' | url }}" type="video/mp4" />
-  </video>
+<section class="relative mt-4 container-custom h-screen flex items-center justify-center rounded-[25px] overflow-hidden border-2 border-gray-900 shadow-xl">
+    <!-- Video: remove negative z-index, disable pointer events -->
+    <video
+        class="absolute w-full h-full object-cover z-0 pointer-events-none"
+        autoplay
+        muted
+        loop
+        playsinline
+        webkit-playsinline
+        preload="auto"
+        data-wf-ignore="true"
+    >
+        <source src="{{ '/assets/video/hero-video.mp4' | url }}" type="video/mp4">
+    </video>
 
-  <!-- Overlay (semi-transparent gradient) -->
-  <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-red-400 opacity-30 -z-10"></div>
+    <!-- Gradient overlay: set z-index below text, disable pointer events -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-red-400 opacity-30 z-5 pointer-events-none"></div>
 
-  <!-- Hero Content -->
-  <div class="text-center relative z-10">
-    <h1 class="hero-title text-4xl md:text-6xl font-bold mb-6">
-      Твоята кола заслужава най-доброто качество и грижа.
-    </h1>
-    <p class="hero-subtitle text-xl md:text-2xl text-luxury-gray mb-8 max-w-2xl mx-auto">
-      Премиум измиване с внимание към всеки детайл.
-    </p>
-    <a href="/rezervaciq" class="btn-primary hero-button">Резервирайте сега</a>
-  </div>
+    <!-- Text/button container stays at z-10 -->
+    <div class="text-center relative z-10">
+        <h1 class="hero-title text-4xl md:text-6xl font-bold mb-6">
+            Твоята кола заслужава най-доброто качество и грижа.
+        </h1>
+        <p class="hero-subtitle text-xl md:text-2xl text-luxury-gray mb-8 max-w-2xl mx-auto">
+            Премиум измиване с внимание към всеки детайл.
+        </p>
+        <a href="/rezervaciq" class="btn-primary hero-button">Резервирайте сега</a>
+    </div>
 </section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const vid = document.getElementById("heroVideo");
-    const btn = document.getElementById("playButton");
 
-    // Ensure video is muted (some iOS versions only allow muted autoplay)
-    vid.muted = true;
-
-    // Try to play immediately
-    vid.play().catch(function(err) {
-      // Autoplay was blocked → show the “Tap to Play” button
-      btn.classList.remove("hidden");
-    });
-
-    // When user taps the button, attempt to play again
-    btn.addEventListener("click", function() {
-      vid.play().then(function() {
-        // Playback succeeded → hide button
-        btn.classList.add("hidden");
-      }).catch(function(err) {
-        console.warn("Play still blocked:", err);
-        // You could keep the button visible or show an error message
-      });
-    });
-  });
-</script>
 
 
 <!-- About Section -->
