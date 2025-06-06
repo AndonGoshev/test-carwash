@@ -20,7 +20,7 @@
         <meta property="og:url" content="https://example.com/your-page"/>
         <meta property="og:type" content="website"/>
 
-        <script src="https://cdn.tailwindcss.com"></script>
+        
 
         <script src="assets/js/gsap.min.js"></script>
 
@@ -54,7 +54,14 @@
             
 <!-- Hero Section -->
 <section  class="relative mt-4 container-custom h-screen flex items-center justify-center rounded-[25px] overflow-hidden border-2 border-gray-900 shadow-xl">
-    <video class="absolute w-full h-full object-cover -z-20" autoplay muted loop playsinline>
+    <video class="absolute w-full h-full object-cover -z-20" 
+    autoplay 
+       muted 
+       loop 
+       playsinline 
+       webkit-playsinline
+       preload="auto"
+       data-wf-ignore="true">
         <source src="/test-carwash/assets/video/hero-video.mp4" type="video/mp4">
     </video>
     <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-red-400 opacity-30 -z-10"></div>
