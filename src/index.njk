@@ -5,9 +5,9 @@ title: Начало
 
 <!-- Hero Section -->
 <section class="relative mt-4 container-custom h-screen flex items-center justify-center rounded-[25px] overflow-hidden border-2 border-gray-900 shadow-xl">
-    <!-- Video: remove negative z-index, set to z-0, disable pointer events -->
+    <!-- Video: drop pointer-events-none -->
     <video
-        class="absolute w-full h-full object-cover z-0 pointer-events-none"
+        class="absolute w-full h-full object-cover z-0"
         autoplay
         muted
         loop
@@ -19,10 +19,10 @@ title: Начало
         <source src="{{ '/assets/video/hero-video.mp4' | url }}" type="video/mp4">
     </video>
 
-    <!-- Gradient overlay: use z-10, disable pointer events -->
+    <!-- Gradient overlay: keep pointer-events-none, z-10 -->
     <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-red-400 opacity-30 z-10 pointer-events-none"></div>
 
-    <!-- Text/button container: bump up to z-20 -->
+    <!-- Text/button: z-20 -->
     <div class="text-center relative z-20">
         <h1 class="hero-title text-4xl md:text-6xl font-bold mb-6">
             Твоята кола заслужава най-доброто качество и грижа.
@@ -34,32 +34,6 @@ title: Начало
     </div>
 </section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var btn = document.querySelector('.hero-button');
-    if (!btn) return;
-
-    // 1) Make sure the button is positioned on top
-    btn.style.position = 'relative';
-    btn.style.zIndex = '9999';
-
-    // 2) Ensure it can receive pointer events
-    btn.style.pointerEvents = 'auto';
-
-    // 3) (Optional) On iOS some layers still “swallow” taps—so
-    //    forward any tap on the parent '.text-center' directly to the link:
-    var parent = btn.closest('.text-center');
-    if (parent) {
-      parent.style.cursor = 'pointer';
-      parent.addEventListener('click', function(e) {
-        // If the click wasn’t already on the <a>, jump to its href
-        if (e.target !== btn && !btn.contains(e.target)) {
-          window.location.href = btn.getAttribute('href');
-        }
-      });
-    }
-  });
-</script>
 
 
 
