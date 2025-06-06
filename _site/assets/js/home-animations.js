@@ -36,49 +36,49 @@ tl.fromTo(
 
 
 
-gsap.fromTo(
-  ".service-card",
-  { opacity: 0, scale: 0.95 },
-  {
-    opacity: 1,
-    scale: 1,
-    duration: 1.8,
-    ease: "power3.out",
-    stagger: 0.3,
-    scrollTrigger: {
-      trigger: ".service-card",
-      start: "top 75%",
-      toggleActions: "play none none none",
-    },
-  }
-);
+// gsap.fromTo(
+//   ".service-card",
+//   { opacity: 0, scale: 0.95 },
+//   {
+//     opacity: 1,
+//     scale: 1,
+//     duration: 1.8,
+//     ease: "power3.out",
+//     stagger: 0.3,
+//     scrollTrigger: {
+//       trigger: ".service-card",
+//       start: "top 75%",
+//       toggleActions: "play none none none",
+//     },
+//   }
+// );
 
 
-gsap.from(".home-testimonaials .grid > div", {
-  opacity: 0,
-  y: 40,
-  duration: 1.8,
-  ease: "power3.out",
-  stagger: 0.2,
-  scrollTrigger: {
-    trigger: ".home-testimonials",
-    start: "top 80%",
-    toggleActions: "play none none none",
-    // markers: true, // optional for debug
-  }
-});
+// gsap.from(".home-testimonaials .grid > div", {
+//   opacity: 0,
+//   y: 40,
+//   duration: 1.8,
+//   ease: "power3.out",
+//   stagger: 0.2,
+//   scrollTrigger: {
+//     trigger: ".home-testimonials",
+//     start: "top 80%",
+//     toggleActions: "play none none none",
+//     // markers: true, // optional for debug
+//   }
+// });
 
 
-gsap.from(".home-testimonials .grid > div .w-12", {
-  scale: 0.6,
-  opacity: 0,
-  duration: 0.5,
-  ease: "back.out(1.7)",
-  stagger: 0.2,
-  delay: 0.3,
-  scrollTrigger: {
-    trigger: ".home-testimonials .grid",
-    start: "top 50%",
-    toggleActions: "play none none none",
-  }
-});
+// gsap.from(".home-testimonials .grid > div .w-12", {
+//   scale: 0.6,
+//   opacity: 0,
+//   duration: 0.5,
+//   ease: "back.out(1.7)",
+//   stagger: 0.2,
+//   delay: 0.3,
+//   scrollTrigger: {
+//     trigger: ".home-testimonials .grid",
+//     start: "top 50%",
+//     toggleActions: "play none none none",
+//   }
+// });
