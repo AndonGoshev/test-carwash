@@ -54,7 +54,7 @@
             
 <!-- Hero Section -->
 <section class="relative mt-4 container-custom h-screen flex items-center justify-center rounded-[25px] overflow-hidden border-2 border-gray-900 shadow-xl">
-    <!-- Video: remove negative z-index, disable pointer events -->
+    <!-- Video: remove negative z-index, set to z-0, disable pointer events -->
     <video
         class="absolute w-full h-full object-cover z-0 pointer-events-none"
         autoplay
@@ -68,11 +68,11 @@
         <source src="/test-carwash/assets/video/hero-video.mp4" type="video/mp4">
     </video>
 
-    <!-- Gradient overlay: set z-index below text, disable pointer events -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-red-400 opacity-30 z-5 pointer-events-none"></div>
+    <!-- Gradient overlay: use z-10, disable pointer events -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-red-400 opacity-30 z-10 pointer-events-none"></div>
 
-    <!-- Text/button container stays at z-10 -->
-    <div class="text-center relative z-10">
+    <!-- Text/button container: bump up to z-20 -->
+    <div class="text-center relative z-20">
         <h1 class="hero-title text-4xl md:text-6xl font-bold mb-6">
             Твоята кола заслужава най-доброто качество и грижа.
         </h1>
@@ -82,6 +82,7 @@
         <a href="/rezervaciq" class="btn-primary hero-button">Резервирайте сега</a>
     </div>
 </section>
+
 
 
 
