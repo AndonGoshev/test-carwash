@@ -34,6 +34,33 @@ title: Начало
     </div>
 </section>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var btn = document.querySelector('.hero-button');
+    if (!btn) return;
+
+    // 1) Make sure the button is positioned on top
+    btn.style.position = 'relative';
+    btn.style.zIndex = '9999';
+
+    // 2) Ensure it can receive pointer events
+    btn.style.pointerEvents = 'auto';
+
+    // 3) (Optional) On iOS some layers still “swallow” taps—so
+    //    forward any tap on the parent '.text-center' directly to the link:
+    var parent = btn.closest('.text-center');
+    if (parent) {
+      parent.style.cursor = 'pointer';
+      parent.addEventListener('click', function(e) {
+        // If the click wasn’t already on the <a>, jump to its href
+        if (e.target !== btn && !btn.contains(e.target)) {
+          window.location.href = btn.getAttribute('href');
+        }
+      });
+    }
+  });
+</script>
+
 
 
 
