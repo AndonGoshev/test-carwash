@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Пакет Speed Lux + почистване и подхранване на кожен салон",
+    "description": "Цялостна грижа за кожен салон с включено Speed Lux измиване.",
+    "price": 100,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-kojen-salon.jpg"
+  },
+  {
+    "title": "Пакет Speed Lux + почистване на климатичната инсталация",
+    "description": "Почистване и дезинфекция на климатичната система, включващо Speed Lux.",
+    "price": 70,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-klimatik.jpg"
+  },
+  {
+    "title": "Външно измиване + полиране на фарове",
+    "description": "Комбинирана услуга за блестящ външен вид и ясни фарове.",
+    "price": 90,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-vunshno1.jpg"
+  },
+  {
+    "title": "Външно измиване + полимерна защита",
+    "description": "Почистване с дълготрайна защита за боята чрез полимерно покритие.",
+    "price": 100,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-vunshno2.jpg"
+  },
+  {
+    "title": "Полиране на автомобил",
+    "description": "Премахване на леки драскотини и възвръщане на блясъка на автомобила.",
+    "price": 190,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-polirane.jpg"
+  },
+  {
+    "title": "Пастиране на автомобил",
+    "description": "Дълбоко пастиране за цялостно възстановяване на външния вид.",
+    "price": 350,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-pastirane.jpg"
+  },
+  {
+    "title": "Външно измиване + Твърда вакса",
+    "description": "Почистване и защита чрез висококачествена твърда вакса.",
+    "price": 70,
+    "link": "/rezervaciq",
+    "image": "/assets/images/usluga-vunshno3.jpg"
+  }
+]

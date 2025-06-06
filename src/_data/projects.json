@@ -1,0 +1,105 @@
+[
+    {
+        "id": 1,
+        "carMake": "Мерцедес",
+        "carModel": "S-Класа",
+        "service": "Пълен детайлинг",
+        "images": [
+            "/assets/images/projects/mercedes.jpg",
+            "{{ '/assets/images/projects/mercedes-s-2.jpg' | url }}",
+            "{{ '/assets/images/projects/mercedes-s-3.jpg' | url }}",
+            "{{ '/assets/images/projects/mercedes-s-4.jpg' | url }}"
+        ]
+    },
+    {
+        "id": 2,
+        "carMake": "БМВ",
+        "carModel": "X5",
+        "service": "Керамично покритие",
+        "images": [
+            "/assets/images/projects/bmw.jpg",
+            "/assets/images/projects/bmw-x5-2.jpg",
+            "/assets/images/projects/bmw-x5-3.jpg",
+            "/assets/images/projects/bmw-x5-4.jpg",
+            "/assets/images/projects/bmw-x5-5.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "carMake": "Ауди",
+        "carModel": "A8",
+        "service": "Премиум миене и восък",
+        "images": [
+            "/assets/images/projects/audi.jpg",
+            "/assets/images/projects/audi-a8-2.jpg",
+            "/assets/images/projects/audi-a8-3.jpg",
+            "/assets/images/projects/audi-a8-4.jpg",
+            "/assets/images/projects/audi-a8-5.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "carMake": "Порше",
+        "carModel": "911",
+        "service": "Пълна реставрация",
+        "images": [
+            "/assets/images/projects/porche.jpg",
+            "/assets/images/projects/porsche-911-2.jpg",
+            "/assets/images/projects/porsche-911-3.jpg",
+            "/assets/images/projects/porsche-911-4.jpg",
+            "/assets/images/projects/porsche-911-5.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "carMake": "Бентли",
+        "carModel": "модел LS",
+        "service": "Детайлинг на интериор",
+        "images": [
+            "/assets/images/projects/bentley.jpg",
+            "/assets/images/projects/lexus-ls-2.jpg",
+            "/assets/images/projects/lexus-ls-3.jpg",
+            "/assets/images/projects/lexus-ls-4.jpg",
+            "/assets/images/projects/lexus-ls-5.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "carMake": "Ягуар",
+        "carModel": "XF",
+        "service": "Външно полиране",
+        "images": [
+            "/assets/images/projects/jaguar-xf-1.jpg",
+            "/assets/images/projects/jaguar-xf-2.jpg",
+            "/assets/images/projects/jaguar-xf-3.jpg",
+            "/assets/images/projects/jaguar-xf-4.jpg",
+            "/assets/images/projects/jaguar-xf-5.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "carMake": "Волво",
+        "carModel": "XC90",
+        "service": "Пълно почистване",
+        "images": [
+            "/assets/images/projects/volvo-xc90-1.jpg",
+            "/assets/images/projects/volvo-xc90-2.jpg",
+            "/assets/images/projects/volvo-xc90-3.jpg",
+            "/assets/images/projects/volvo-xc90-4.jpg",
+            "/assets/images/projects/volvo-xc90-5.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "carMake": "Рейндж Ровър",
+        "carModel": "Evoque",
+        "service": "Защитна пелена",
+        "images": [
+            "/assets/images/projects/range-rover-1.jpg",
+            "/assets/images/projects/range-rover-2.jpg",
+            "/assets/images/projects/range-rover-3.jpg",
+            "/assets/images/projects/range-rover-4.jpg",
+            "/assets/images/projects/range-rover-5.jpg"
+        ]
+    }
+]
