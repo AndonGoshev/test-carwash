@@ -4,9 +4,9 @@ title: Начало
 ---
 
 <!-- Hero Section -->
-<section class="relative container-custom h-screen flex items-center justify-center rounded-3xl overflow-hidden border-2 border-gray-900 shadow-xl">
+<section class="relative mt-4 container-custom h-screen flex items-center justify-center rounded-[25px] overflow-hidden border-2 border-gray-900 shadow-xl">
     <video class="absolute w-full h-full object-cover -z-20" autoplay muted loop playsinline>
-        <source src="/assets/video/hero-video.mp4" type="video/mp4">
+        <source src="{{ '/assets/video/hero-video.mp4' | url }}" type="video/mp4">
     </video>
     <div class="absolute inset-0 bg-gradient-to-r from-black via-black to-red-400 opacity-30 -z-10"></div>
     <div class="text-center relative z-10">
@@ -44,7 +44,7 @@ title: Начало
                 <img
           src="{{ 'assets/images/washed-car.jpg' | url }}"
           alt="Луксозна чакалня"
-         class="w-1/2 h-full object-cover border-2 border-gray-100 rounded-l-xl"
+         class="w-1/2 h-full object-cover border-2 border-gray-100 rounded-l-[25px]"
 />
 
                 <!-- Right Two Stacked Images -->
@@ -52,12 +52,12 @@ title: Начало
                     <img
             src="{{ 'assets/images/coffee-house.jpg' | url }}"
             alt="Кафе зона"
-            class="h-[calc(50%-5px)] object-cover border-2 border-gray-100 rounded-tr-2xl"
+            class="h-[calc(50%-5px)] object-cover border-2 border-gray-100 rounded-tr-[25px]"
 />
                     <img
             src="{{ 'assets/images/about-home.jpg' | url }}"
             alt="Чакалня"
-            class="h-[calc(50%-5px)] object-cover border-2 border-gray-100 rounded-br-2xl"
+            class="h-[calc(50%-5px)] object-cover border-2 border-gray-100 rounded-br-[25px]"
 />
                 </div>
 
@@ -72,20 +72,20 @@ title: Начало
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-white">Услуги</h2>
 
         <!-- Optional scroll hint overlays -->
-        <div class="hidden md:block absolute left-0 top-28 bottom-0 w-10 bg-gradient-to-r from-luxury-black to-transparent z-10 pointer-events-none"></div>
-        <div class="hidden md:block absolute right-0 top-28 bottom-0 w-10 bg-gradient-to-l from-luxury-black to-transparent z-10 pointer-events-none"></div>
+        {# <div class="hidden md:block absolute left-0 top-28 bottom-0 w-10 bg-gradient-to-r from-luxury-black to-transparent z-10 pointer-events-none"></div>
+        <div class="hidden md:block absolute right-0 top-28 bottom-0 w-10 bg-gradient-to-l from-luxury-black to-transparent z-10 pointer-events-none"></div> #}
 
         <!-- Scrollable cards container -->
         <div class="flex space-x-6 overflow-x-auto pb-6 custom-scrollbar relative z-20">
             {% for service in services %}
-                <div class="service-card relative bg-gradient-to-br min-w-[250px] md:min-w-[320px] from-luxury-black to-black-900 p-4 rounded-lg border border-luxury-gray/20 flex flex-col overflow-hidden">
+                <div class="service-card relative bg-gradient-to-br min-w-[250px] md:min-w-[320px] from-luxury-black to-black-900 p-4 rounded-[25px] border border-luxury-gray/20 flex flex-col overflow-hidden">
 
                     <!-- Glow behind image -->
                     <div class="absolute top-4 left-1/2 -translate-x-1/2 w-72 h-72 bg-gray-700 opacity-50 blur-2xl z-0"></div>
 
                     <!-- Image -->
-                    <img src="{{ service.image }}" alt="{{ service.alt }}"
-           class="service-image w-full h-48 object-cover rounded-lg mb-6 z-10 relative transition-transform duration-300 hover:scale-105 hover:rotate-1"/>
+                    <img src="{{ service.image | url }}" alt="{{ service.alt }}"
+           class="service-image w-[98%] mx-auto mt-1 h-48 object-cover rounded-[25px] mb-6 z-10 relative transition-transform duration-300 hover:scale-105 hover:rotate-1"/>
 
                     <!-- Text Content -->
                     <h3 class="text-xl font-bold mb-4 text-white z-10 relative">{{ service.title }}</h3>
@@ -120,12 +120,12 @@ title: Начало
             </button>
 
             <!-- Gallery Wrapper -->
-            <div class="overflow-hidden rounded-2xl">
+            <div class="overflow-hidden rounded-[50px] shadow-2xl " style="box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);">
                 <div id="gallerySlider" class="flex transition-transform duration-500 ease-in-out">
                     {% for project in projects.slice(0, 5) %}
                         <div class="w-full flex-shrink-0 relative">
                             <!-- Project Image -->
-                            <div class="relative h-[500px] md:h-[600px] rounded-2xl overflow-hidden border-2 border-luxury-gray/20 shadow-2xl">
+                            <div class="relative h-[500px] md:h-[600px] rounded-[50px] overflow-hidden border-2 border-gray-800 ">
                                 <img 
                                     src="{{ project.images[0] | url }}" 
                                     alt="{{ project.carMake }} {{ project.carModel }} - {{ project.service }}"
@@ -177,7 +177,7 @@ title: Начало
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Отзиви от клиенти</h2>
         <div class="grid md:grid-cols-3 gap-8">
             <!-- Testimonial 1 -->
-            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-8 rounded-lg border border-luxury-red/20">
+            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-8 rounded-[25px] border border-luxury-red/20">
                 <div class="flex items-center mb-4">
                     <div class="w-12 h-12 bg-luxury-red rounded-full flex items-center justify-center text-xl font-bold">ИП</div>
                     <div class="ml-4">
@@ -189,7 +189,7 @@ title: Начало
             </div>
 
             <!-- Testimonial 2 -->
-            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-8 rounded-lg border border-luxury-red/20">
+            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-8 rounded-[25px] border border-luxury-red/20">
                 <div class="flex items-center mb-4">
                     <div class="w-12 h-12 bg-luxury-red rounded-full flex items-center justify-center text-xl font-bold">МГ</div>
                     <div class="ml-4">
@@ -200,7 +200,7 @@ title: Начало
                 <p class="text-luxury-gray">Впечатлена съм от вниманието към детайла и професионализма на екипа. Автомобилът ми никога не е изглеждал по-добре!</p>
             </div>
 
-            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-8 rounded-lg border border-luxury-red/20">
+            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-8 rounded-[25px] border border-luxury-red/20">
                 <div class="flex items-center mb-4">
                     <div class="w-12 h-12 bg-luxury-red rounded-full flex items-center justify-center text-xl font-bold">МГ</div>
                     <div class="ml-4">
@@ -220,19 +220,19 @@ title: Начало
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Често задавани въпроси</h2>
         <div class="max-w-3xl mx-auto space-y-4">
             <!-- FAQ Item 1 -->
-            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-6 rounded-lg border border-luxury-red/20">
+            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-6 rounded-2xl border border-luxury-red/20">
                 <h3 class="text-xl font-bold mb-2">Колко време отнема една пълна услуга?</h3>
                 <p class="text-luxury-gray">Времето зависи от избраната услуга. Стандартното външно почистване отнема около 30-40 минути, докато пълният детайлинг може да отнеме 2-3 часа.</p>
             </div>
 
             <!-- FAQ Item 2 -->
-            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-6 rounded-lg border border-luxury-red/20">
+            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-6 rounded-2xl border border-luxury-red/20">
                 <h3 class="text-xl font-bold mb-2">Трябва ли да резервирам час?</h3>
                 <p class="text-luxury-gray">Да, препоръчваме предварителна резервация, за да гарантираме най-добро обслужване и минимално време за чакане.</p>
             </div>
 
             <!-- FAQ Item 3 -->
-            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-6 rounded-lg border border-luxury-red/20">
+            <div class="bg-gradient-to-br from-luxury-black to-luxury-black/80 p-6 rounded-2xl border border-luxury-red/20">
                 <h3 class="text-xl font-bold mb-2">Какви методи за плащане приемате?</h3>
                 <p class="text-luxury-gray">Приемаме плащания в брой, с кредитни/дебитни карти и чрез банков превод.</p>
             </div>

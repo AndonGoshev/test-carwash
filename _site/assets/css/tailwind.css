@@ -18,14 +18,14 @@
     }
     
     .container-custom {
-        @apply max-w-90 mx-auto px-4 md:px-6;
+        @apply max-w-[95%] mx-auto px-4 md:px-6;
     }
     
     .btn-primary {
-        @apply bg-luxury-red text-white px-8 py-3 rounded hover:bg-red-700 transition-colors inline-block;
+        @apply bg-luxury-red text-white px-8 py-3 rounded-[15px] hover:bg-red-700 transition-colors inline-block;
     }
     
     .btn-secondary {
-        @apply border-2 border-luxury-red text-luxury-red px-8 py-3 rounded hover:bg-luxury-red hover:text-white transition-colors inline-block;
+        @apply border-2 border-luxury-red text-luxury-red px-8 py-3 rounded-[15px] hover:bg-luxury-red hover:text-white transition-colors inline-block;
     }
 } 

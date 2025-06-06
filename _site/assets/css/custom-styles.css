@@ -1,4 +1,4 @@
-@import url('/assets/css/home.css');
+@import url('/test-carwash/assets/css/home.css');
 
 body {
   position: relative;
@@ -15,7 +15,7 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('/assets/images/background2.jpg') no-repeat center center / cover;
+  background: url('/test-carwash/assets/images/background2.jpg') no-repeat center center / cover;
   opacity: 0.3;
   z-index: -20;
   pointer-events: none;
