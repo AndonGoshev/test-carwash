@@ -27,6 +27,28 @@ title: Начало
     </div>
 </section>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('video');
+    if (video) {
+        video.muted = true;
+        video.playsInline = true;
+        
+        // Force play on iOS
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log('Auto-play was prevented:', error);
+                // Fallback: play on first user interaction
+                document.addEventListener('touchstart', function() {
+                    video.play();
+                }, { once: true });
+            });
+        }
+    }
+});
+</script>
+
 <!-- About Section -->
 <section class="section-padding ">
     <div class="container-custom">
